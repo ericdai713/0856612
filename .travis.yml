@@ -1,12 +1,9 @@
 language: java
 
-before_install:
-  - echo "before_install"
-install:
-  - echo "install"
+addons:
+  apt:
+    packages:
+    - junit5
 
-before_script:
-  - echo "before_script"
-script:
-  - echo "script"
-  - ./gradlew test
+before_install:
+  - cd java
