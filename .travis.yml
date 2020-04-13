@@ -1,7 +1,13 @@
 language: java
 
+dist: trusty
 jdk:
-  - oraclejdk13
-  
+  - oraclejdk9
+addons:
+  apt:
+    packages:
+    - junit4
+    - libmockito-java
 script:
-  - ant PriorityQueueTest
+  - cd bin
+  - java -classpath .:/usr/share/java/junit4.jar:/usr/share/java/mockito-core.jar PriorityQueueTest
