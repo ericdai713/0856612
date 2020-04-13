@@ -6,8 +6,7 @@ public class TestRunner {
     public static void main(String[] args) throws Exception {
         Result result = JUnitCore.runClasses(PriorityQueueTest.class);
         for (Failure failure : result.getFailures()) {
-            System.out.println(failure.toString());
-            throws new Exception();
+            throw new exception_class(failure.toString());
         }
     }
 }
