@@ -9,8 +9,5 @@ addons:
     - junit4
     - libmockito-java
 script:
-  - rm -r bin/*.class bin/*.exec bin/reportDir 2> /dev/null || true
-  - mkdir -p bin
-  - javac -classpath /usr/share/java/junit4.jar:/usr/share/java/mockito-core.jar PriorityQueueTest.java -d bin
-  - cd bin
+  - javac -classpath /usr/share/java/junit4.jar:/usr/share/java/mockito-core.jar PriorityQueueTest.java
   - java -classpath .:/usr/share/java/junit4.jar:/usr/share/java/mockito-core.jar PriorityQueueTest
