@@ -1,9 +1,10 @@
 language: java
 
+dist: trusty
+jdk:
+  - oraclejdk9
 addons:
   apt:
     packages:
-    - junit5
-
-before_install:
-  - cd java
+    - junit4
+    - libmockito-java
