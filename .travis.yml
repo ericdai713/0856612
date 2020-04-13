@@ -9,5 +9,5 @@ addons:
     - junit4
     - libmockito-java
 script:
-  - javac -classpath /usr/share/java/junit4.jar:/usr/share/java/mockito-core.jar TestRunner.java
+  - javac -classpath /usr/share/java/junit4.jar:/usr/share/java/mockito-core.jar TestRunner.java PriorityQueueTest.java
   - java -classpath .:/usr/share/java/junit4.jar:/usr/share/java/mockito-core.jar TestRunner
